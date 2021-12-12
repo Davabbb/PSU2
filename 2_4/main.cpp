@@ -1,4 +1,4 @@
-//https://contest.yandex.ru/contest/30914/run-report/57871078/
+//https://contest.yandex.ru/contest/30914/run-report/60903720/
 
 #include <iostream>
 
@@ -76,6 +76,7 @@ int main() {
     }
 
     std::cout << s;
+    delete [] points;
 
     return 0;
 }
