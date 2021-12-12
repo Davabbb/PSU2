@@ -5,7 +5,7 @@
 #include <string>
 #include <map>
 
-void msd_sort(std::vector<std::string> * data, int index, std::vector<int>* data_help) {
+void msd_sort(std::vector<std::string>* data, int index, std::vector<int>* data_help) {
     std::map <char, std::vector<int>> count;
     for (int s : *data_help) {
         if ((*data)[s].size() > index) {
@@ -21,8 +21,8 @@ void msd_sort(std::vector<std::string> * data, int index, std::vector<int>* data
 
 int main() {
     std::ios_base::sync_with_stdio(false);
-    std::cin.tie(NULL);
-    std::cout.tie(NULL);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
     std::vector<std::string> data;
     for(std::string s; std::cin >> s; data.push_back(s));
     std::vector<int> data_help;
