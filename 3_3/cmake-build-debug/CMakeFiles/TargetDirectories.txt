@@ -1,3 +1,0 @@
-C:/Users/david/CLionProjects/PSU2/3_3/cmake-build-debug/CMakeFiles/3_3.dir
-C:/Users/david/CLionProjects/PSU2/3_3/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/david/CLionProjects/PSU2/3_3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
