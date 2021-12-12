@@ -1,12 +1,11 @@
-//https://contest.yandex.ru/contest/30914/run-report/58306528/
+//https://contest.yandex.ru/contest/30914/run-report/60917561/
 
 #include <iostream>
 #include <random>
 #include <vector>
 
-int Partition(std::vector<int>& data, int l, int r) {
-    std::random_device a;
-    std::mt19937 generator(a());
+int Partition(std::vector<int>& data, int l, int r, auto generator) {
+
     std::uniform_int_distribution<int> uniform_dist(l, r - 1);
     int pivot = uniform_dist(generator);
     std::swap(data[pivot], data[r - 1]);
@@ -38,18 +37,12 @@ int Partition(std::vector<int>& data, int l, int r) {
     return i;
 }
 
-double KStat(std::vector<int>& data, int n, int find) {
+double KStat(std::vector<int>& data, int n, int find, auto generator) {
     int l = 0, r = n;
 
     while (true) {
-        int pivot_pos = Partition(data, l, r);
+        int pivot_pos = Partition(data, l, r, generator);
         if (pivot_pos == find) {
-
-//            for (int i = 0; i < n; i++) {
-//                std::cout << data[i] << " ";
-//            }
-//            std::cout << data[find] << " ";
-
             return data[find];
         }
         if (pivot_pos < find) {
@@ -61,6 +54,9 @@ double KStat(std::vector<int>& data, int n, int find) {
 }
 
 int main() {
+    std::random_device a;
+    std::mt19937 generator(a());
+
     int n, find;
     std::cin >> n >> find;
 
@@ -71,6 +67,6 @@ int main() {
         data.push_back(elem);
     }
 
-    std::cout << KStat(data, n, find);
+    std::cout << KStat(data, n, find, generator);
     return 0;
 }
