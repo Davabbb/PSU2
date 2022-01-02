@@ -56,7 +56,7 @@ int main() {
         points[i] = point;
     }
 
-    sort(reinterpret_cast<Point*>(points), n * 2);
+    sort(points, n * 2);
 
     int s = 0;
     int count = 0;
